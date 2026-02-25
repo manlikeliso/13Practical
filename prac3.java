@@ -230,62 +230,62 @@ public class timeMethods {
 
 
 
-        double binaryAvg = binaryTotal / repetitions;
+        double binaryAvg = binaryTotal / repetitions;
 
-        double binaryStd = Math.sqrt(
+        double binaryStd = Math.sqrt(
 
-                (binaryTotalSq - repetitions * binaryAvg * binaryAvg)
+                (binaryTotalSq - repetitions * binaryAvg * binaryAvg)
 
-                        / (repetitions - 1)
+                        / (repetitions - 1)
 
-        );
-
-
-
-        // Convert nanoseconds to milliseconds
-
-        linearAvg /= 1_000_000.0;
-
-        linearStd /= 1_000_000.0;
-
-        binaryAvg /= 1_000_000.0;
-
-        binaryStd /= 1_000_000.0;
+        );
 
 
 
-        // ----------- Output -----------
+        // Convert nanoseconds to milliseconds
+
+        linearAvg /= 1_000_000.0;
+
+        linearStd /= 1_000_000.0;
+
+        binaryAvg /= 1_000_000.0;
+
+        binaryStd /= 1_000_000.0;
 
 
 
-        System.out.println("\nRESULTS");
-
-        System.out.println("-----------------------------------");
+        // ----------- Output -----------
 
 
 
-        System.out.println("Linear Search:");
+        System.out.println("\nRESULTS");
 
-        System.out.println("Average Time = " + fiveD.format(linearAvg) + " ms");
-
-        System.out.println("Std Deviation = " + fiveD.format(linearStd) + " ms");
+        System.out.println("-----------------------------------");
 
 
 
-        System.out.println();
+        System.out.println("Linear Search:");
+
+        System.out.println("Average Time = " + fiveD.format(linearAvg) + " ms");
+
+        System.out.println("Std Deviation = " + fiveD.format(linearStd) + " ms");
 
 
 
-        System.out.println("Binary Search:");
-
-        System.out.println("Average Time = " + fiveD.format(binaryAvg) + " ms");
-
-        System.out.println("Std Deviation = " + fiveD.format(binaryStd) + " ms");
+        System.out.println();
 
 
 
-        System.out.println("-----------------------------------");
+        System.out.println("Binary Search:");
 
-    }
+        System.out.println("Average Time = " + fiveD.format(binaryAvg) + " ms");
+
+        System.out.println("Std Deviation = " + fiveD.format(binaryStd) + " ms");
+
+
+
+        System.out.println("-----------------------------------");
+
+    }
 
 }
